@@ -10,15 +10,14 @@
         <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
     </agm-map>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-    <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-    </li>
-    <li>
-        <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-    </li>
-    <li>
-        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-    </li>
-</ul>
+<h2>Tweets </h2>
+
+    <div *ngFor="let tweet of tweets">
+        <ul>
+            <li><span>Tweet Id: </span><span>{{tweet.id}}</span></li>
+            <li><span>Text: </span><span>{{tweet.text}}</span></li>
+            <li><span>User Id: </span><span>{{tweet.user.id}}</span></li>
+            <li><span>User Name: </span><span>{{tweet.user.name}}</span></li>
+            <li><span>User Lang: </span><span>{{tweet.user.lang}}</span></li>
+        </ul>
+    </div>

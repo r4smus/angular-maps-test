@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 
 import { AgmCoreModule } from '@agm/core';
 
+import { JsonReaderService } from './json-reader.service';
+import { HttpModule } from '@angular/http';
+
 
 @NgModule({
   declarations: [
@@ -16,11 +19,12 @@ import { AgmCoreModule } from '@agm/core';
     BrowserModule,
     CommonModule,
     FormsModule,
+    HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA3UAF3Lhv-VoF29P4FhBgklVkc4VLD0vU'
     })
   ],
-  providers: [],
+  providers: [JsonReaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
